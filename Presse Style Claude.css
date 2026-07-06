@@ -1,0 +1,147 @@
+body {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #111;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+#gameContainer {
+  text-align: center;
+}
+
+#hud {
+  color: #eee;
+  font-size: 15px;
+  margin-bottom: 8px;
+  display: flex;
+  gap: 24px;
+  justify-content: center;
+  font-family: 'Courier New', monospace;
+}
+
+#viewfinderWrap {
+  position: relative;
+  width: 800px;
+  max-width: 92vw;
+  aspect-ratio: 800 / 400;
+  border-radius: 50% / 12%;
+  overflow: hidden;
+  border: 6px solid #000;
+  box-shadow: 0 0 0 2px #444;
+  cursor: crosshair;
+}
+
+canvas {
+  width: 100%;
+  height: 100%;
+  display: block;
+  background: #cfd8dc;
+}
+
+#vignette {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: radial-gradient(ellipse at center, rgba(0,0,0,0) 55%, rgba(0,0,0,0.85) 100%);
+}
+
+#crosshair {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 40px;
+  height: 40px;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  opacity: 0.6;
+}
+
+.ch-line {
+  position: absolute;
+  background: #fff;
+}
+
+.ch-h {
+  width: 100%;
+  height: 1px;
+  top: 50%;
+  left: 0;
+}
+
+.ch-v {
+  width: 1px;
+  height: 100%;
+  left: 50%;
+  top: 0;
+}
+
+#camInfo {
+  position: absolute;
+  bottom: 14px;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  color: #ffca28;
+  font-family: 'Courier New', monospace;
+  font-size: 13px;
+  pointer-events: none;
+  text-shadow: 0 0 3px #000;
+}
+
+#flash {
+  position: absolute;
+  inset: 0;
+  background: #fff;
+  opacity: 0;
+  pointer-events: none;
+}
+
+#warning {
+  position: absolute;
+  top: 20px;
+  left: 0;
+  right: 0;
+  text-align: center;
+  color: #ff5252;
+  font-size: 18px;
+  font-weight: bold;
+  opacity: 0;
+  pointer-events: none;
+  text-shadow: 0 0 4px #000;
+}
+
+#gameOverScreen {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.8);
+  color: #fff;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  font-size: 20px;
+  text-align: center;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+#restartBtn {
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 6px;
+  border: none;
+  background: #ffca28;
+  cursor: pointer;
+}
+
+#instructions {
+  color: #ccc;
+  font-size: 14px;
+  margin-top: 10px;
+}
