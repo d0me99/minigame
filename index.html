@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pressefoto Basel</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="gameContainer">
+    <div id="hud">
+      <span id="filmCounter">Film: 36/36</span>
+      <span id="scoreDisplay">Polizei fotografiert: 0</span>
+      <span id="mistakeDisplay">Fehlaufnahmen: 0</span>
+    </div>
+    <div id="viewfinderWrap">
+      <canvas id="gameCanvas" width="800" height="400"></canvas>
+      <div id="vignette"></div>
+      <div id="crosshair">
+        <div class="ch-line ch-h"></div>
+        <div class="ch-line ch-v"></div>
+      </div>
+      <div id="camInfo">
+        <span>f/2.8</span><span>1/500</span><span>ISO 800</span>
+      </div>
+      <div id="flash"></div>
+      <div id="warning"></div>
+      <div id="gameOverScreen">
+        <div id="gameOverText"></div>
+        <button id="restartBtn">Neuer Film einlegen</button>
+      </div>
+    </div>
+    <div id="instructions">Klick auf Polizist*innen, um sie zu fotografieren. Demonstrant*innen bitte nicht fotografieren.</div>
+  </div>
+
+  <script src="game.js"></script>
+</body>
+</html>
