@@ -9,13 +9,24 @@
 <body>
   <div id="gameContainer">
     <div id="hud">
-      <span id="filmCounter">Film: 36/36</span>
-      <span id="scoreDisplay">Polizei fotografiert: 0</span>
-      <span id="mistakeDisplay">Fehlaufnahmen: 0</span>
+      <span id="filmCounter">FILM 36/36</span>
+      <span id="scoreDisplay">POLIZEI 0</span>
+      <span id="mistakeDisplay">FEHLER 0</span>
+      <div id="healthWrap">
+        <span class="hudLabel">KONDITION</span>
+        <div id="healthBarOuter"><div id="healthBarInner"></div></div>
+      </div>
     </div>
     <div id="viewfinderWrap">
       <canvas id="gameCanvas" width="800" height="400"></canvas>
       <div id="vignette"></div>
+      <div id="hazardOverlay"></div>
+      <div id="corners">
+        <div class="corner tl"></div>
+        <div class="corner tr"></div>
+        <div class="corner bl"></div>
+        <div class="corner br"></div>
+      </div>
       <div id="crosshair">
         <div class="ch-line ch-h"></div>
         <div class="ch-line ch-v"></div>
@@ -23,14 +34,18 @@
       <div id="camInfo">
         <span>f/2.8</span><span>1/500</span><span>ISO 800</span>
       </div>
+      <div id="duckIndicator">IN DECKUNG</div>
       <div id="flash"></div>
       <div id="warning"></div>
+      <div id="hazardWarning"></div>
       <div id="gameOverScreen">
         <div id="gameOverText"></div>
         <button id="restartBtn">Neuer Film einlegen</button>
       </div>
     </div>
-    <div id="instructions">Klick auf Polizist*innen, um sie zu fotografieren. Demonstrant*innen bitte nicht fotografieren.</div>
+    <div id="instructions">
+      Pfeiltasten links/rechts: Position wechseln &middot; Pfeil runter (halten): Ducken &middot; Klick: Auslöser
+    </div>
   </div>
 
   <script src="game.js"></script>
